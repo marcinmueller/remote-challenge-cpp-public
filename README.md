@@ -1,6 +1,6 @@
 # C++ Remote Challenge
 
-This repository contains the basic set up for the C++ remote challenge. It contains necessary boilerplate code. The challenge itself and the test cases are not included and will be given separately. You are free to use any IDE and compiler, although the latter should support at least C++11. In the following, it is explained how to run the code with g++ and make.
+This repository contains the basic set up for the C++ remote challenge. It contains necessary boilerplate code and needs at least C++11 to compile. You are nonetheless encouraged to use the latest C++ standard. The challenge itself and the test cases are not included and will be given separately. You are free to use any IDE and compiler, although the latter should support at least C++11. In the following, it is explained how to run the code with g++ and make.
 
 ## Prerequisites
 
