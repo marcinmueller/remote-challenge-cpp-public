@@ -28,4 +28,10 @@ namespace chal {
 			return const_cast<double&>(const_cast<const Point&>(*this)[i]);
 		}
 	};
+
+	auto operator==(const Point& a, const Point& b)
+		-> bool
+	{
+		return a.x == b.x and a.y == b.y;
+	}
 } //namespace chal

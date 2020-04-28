@@ -1,5 +1,5 @@
 CXX      	 := g++
-CXXFLAGS 	 := -MD -Wall -Wextra -std=c++11 -Wall -Wextra -Wshadow -Wconversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wsign-conversion -Wlogical-op -Wnull-dereference -Wuseless-cast -Wdouble-promotion -Wformat=2 -Woverloaded-virtual -Wno-null-dereference -pedantic -Wswitch-enum
+CXXFLAGS 	 := -MD -Wall -Wextra -std=c++17 -Wall -Wextra -Wshadow -Wconversion -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches -Wsign-conversion -Wlogical-op -Wnull-dereference -Wuseless-cast -Wdouble-promotion -Wformat=2 -Woverloaded-virtual -Wno-null-dereference -pedantic -Wswitch-enum
 
 LDFLAGS  	 :=
 BUILD    	 := ./build
