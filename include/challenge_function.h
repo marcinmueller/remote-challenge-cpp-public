@@ -26,17 +26,17 @@ namespace chal {
 			wrapping_iterator{input_polygon, itRight});
 	}
 
-	enum class HullType {
+	enum class HullPart {
 		Lower,
 		Upper
 	};
 
-	template<HullType> struct ComesBefore;
-	template<> struct ComesBefore<HullType::Lower> : public std::less<Point::value_type> {};
-	template<> struct ComesBefore<HullType::Upper> : public std::greater<Point::value_type> {};
+	template<HullPart> struct ComesBefore;
+	template<> struct ComesBefore<HullPart::Lower> : public std::less<Point::value_type> {};
+	template<> struct ComesBefore<HullPart::Upper> : public std::greater<Point::value_type> {};
 
-	template<HullType H, typename It>
-	inline void create_hull(It it, It itEnd, std::vector<Point>& hull)
+	template<HullPart H, typename It>
+	inline void create_hull_part(It it, It itEnd, std::vector<Point>& hull)
 	{
 		hull.emplace_back(*it);
 		for (++it; it != itEnd; ++it) {
@@ -97,8 +97,8 @@ namespace chal {
 		output_polygon.reserve(input_polygon.size());
 
 		// Compute lower and upper hulls
-		create_hull<HullType::Lower>(itLeft, itRight, output_polygon);
-		create_hull<HullType::Upper>(itRight, itLeft, output_polygon);
+		create_hull_part<HullPart::Lower>(itLeft, itRight, output_polygon);
+		create_hull_part<HullPart::Upper>(itRight, itLeft, output_polygon);
 
 		return output_polygon;
 	}
